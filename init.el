@@ -1,3 +1,5 @@
+;; These are bindings for 26.0.50 or higher
+
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")
