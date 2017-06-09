@@ -56,6 +56,12 @@
 (global-set-key (kbd "M-g") 'goto-line)
 (global-set-key (kbd "s-<f12>") 'toggle-frame-fullscreen)
 
+;; Key-bindings that are some how not the same in Mac and Unix
+(global-set-key (kbd "s-k") 'kill-current-buffer)
+(global-set-key (kbd "s-s") 'save-buffer)
+(global-set-key (kbd "s-z") 'undo-tree-undo)
+(global-set-key (kbd "s-Z") 'undo-tree-redo)
+
 ;;(defun auto-indentation ()
 ;;  "Automatically sets the indentation to that of the previous line"
 ;;  (interactive)
