@@ -18,7 +18,7 @@
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(package-selected-packages
    (quote
-    (dired-narrow sunrise-commander web-mode sublime-themes git-timemachine restclient haskell-mode protobuf-mode ranger paradox org-babel-eval-in-repl org ox-gfm smart-mode-line autopair dtrt-indent evil-magit column-marker wc-mode evil-mc evil-commentary json-mode use-package dracula-theme badger-theme reykjavik-theme relative-line-numbers rainbow-mode highlight-thing ivy-bibtex org-ref writeroom-mode expand-region neotree evil ivy ample-theme auto-complete magit ensime counsel-projectile rainbow-delimiters)))
+    (dired-narrow sunrise-commander web-mode sublime-themes git-timemachine restclient haskell-mode protobuf-mode ranger paradox org-babel-eval-in-repl org ox-gfm smart-mode-line autopair dtrt-indent evil-magit column-marker wc-mode evil-mc evil-commentary json-mode use-package dracula-theme badger-theme reykjavik-theme relative-line-numbers rainbow-mode highlight-thing ivy-bibtex org-ref writeroom-mode expand-region evil ivy ample-theme auto-complete magit ensime counsel-projectile rainbow-delimiters)))
  '(paradox-github-token t)
  '(sml/theme (quote automatic)))
 (custom-set-faces
@@ -146,19 +146,6 @@
 ;; Counsel Projectile
 (require 'counsel-projectile)
 (global-set-key (kbd "s-f") 'counsel-projectile)
-
-;; Neotree
-(require 'neotree)
-(global-set-key [f8] 'neotree-show)
-
-(add-hook 'neotree-mode-hook
-          (lambda ()
-            (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
-            (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
-            (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
-            (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)
-            )
-          )
 
 ;; Expand Region
 (require 'expand-region)
