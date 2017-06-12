@@ -57,6 +57,8 @@
 (global-set-key (kbd "s-}") 'next-buffer)
 (global-set-key (kbd "M-g") 'goto-line)
 (global-set-key (kbd "s-<f12>") 'toggle-frame-fullscreen)
+(global-set-key (kbd "s-O") 'counsel-projectile-switch-project)
+(global-set-key (kbd "s-G") 'magit-status)
 
 ;; Key-bindings that are some how not the same in Mac and Unix
 (global-set-key (kbd "s-k") 'kill-current-buffer)
