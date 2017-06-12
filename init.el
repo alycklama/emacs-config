@@ -86,10 +86,10 @@
 (require 'dracula-theme)
 (load-theme 'dracula t)
 
-(let ((font-name "Inconsolata-17"))
+(let ((font-name "Inconsolata-15"))
   (set-default-font font-name)
   (set-frame-font font-name)
-  )
+)
 
 ;; Evil-mode
 (require 'evil)
