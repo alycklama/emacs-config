@@ -147,6 +147,7 @@
 
 ;; Counsel Projectile
 (require 'counsel-projectile)
+(counsel-projectile-on)
 (global-set-key (kbd "s-f") 'counsel-projectile)
 
 ;; Expand Region
