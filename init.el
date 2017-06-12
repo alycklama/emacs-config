@@ -101,7 +101,7 @@
 (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
 (define-key evil-normal-state-map (kbd "<down>") 'evil-next-visual-line)
 (define-key evil-normal-state-map (kbd "<up>") 'evil-previous-visual-line)
-(evil-mode 1)
+(evil-mode t)
 
 ;; Ivy
 (require 'ivy)
@@ -110,7 +110,7 @@
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "M-x") 'counsel-M-x)
 (global-set-key (kbd "M-s-<tab>") 'ivy-switch-buffer)
-(ivy-mode 1)
+(ivy-mode t)
 
 ;; Rainbow Delimiters
 (require 'rainbow-delimiters)
@@ -186,7 +186,7 @@
 
 ;; Rainbow mode (for automatic coloring of html color codes (e.e. #f00))
 (require 'rainbow-mode)
-(rainbow-mode 1)
+(rainbow-mode t)
 
 ;; Relative line numbers
 (require 'relative-line-numbers)
@@ -219,7 +219,7 @@
 
 ;; Dtrt-Indent
 (require 'dtrt-indent)
-(dtrt-indent-mode 1)
+(dtrt-indent-mode t)
 
 ;; Hooks
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
