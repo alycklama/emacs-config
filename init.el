@@ -18,7 +18,7 @@
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(package-selected-packages
    (quote
-    (dired-narrow sunrise-commander web-mode sublime-themes git-timemachine restclient haskell-mode protobuf-mode ranger paradox org-babel-eval-in-repl org ox-gfm smart-mode-line autopair dtrt-indent evil-magit column-marker wc-mode evil-mc evil-commentary json-mode use-package dracula-theme badger-theme reykjavik-theme relative-line-numbers rainbow-mode highlight-thing ivy-bibtex org-ref writeroom-mode expand-region evil ivy ample-theme auto-complete magit ensime counsel-projectile rainbow-delimiters)))
+    (linum-relative gitignore-mode dired-narrow sunrise-commander web-mode sublime-themes git-timemachine restclient haskell-mode protobuf-mode ranger paradox org-babel-eval-in-repl org ox-gfm smart-mode-line autopair dtrt-indent evil-magit column-marker wc-mode evil-mc evil-commentary json-mode use-package dracula-theme badger-theme reykjavik-theme rainbow-mode highlight-thing ivy-bibtex org-ref writeroom-mode expand-region evil ivy ample-theme auto-complete magit ensime counsel-projectile rainbow-delimiters)))
  '(paradox-github-token t)
  '(sml/theme (quote automatic)))
 (custom-set-faces
@@ -189,9 +189,11 @@
 (require 'rainbow-mode)
 (rainbow-mode t)
 
-;; Relative line numbers
-(require 'relative-line-numbers)
-(relative-line-numbers-mode 1)
+;; Linum relative lines
+(require 'linum-relative)
+(linum-mode t)
+(linum-relative-global-mode t)
+(setq linum-relative-current-symbol "") ;; Shows the real number on the line's position
 
 ;; Smart Hungry Delete
 ;; (require 'smart-hungry-delete)
