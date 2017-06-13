@@ -30,6 +30,11 @@
 (setq load-prefer-newer t)
 
 (package-initialize)
+
+;; A GNU Emacs library to ensure environment variables inside Emacs look the same as in the user's shell.
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
 (unless package-archive-contents
   (package-refresh-contents))
 (package-install-selected-packages)
