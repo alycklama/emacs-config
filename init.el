@@ -179,6 +179,14 @@
           "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
           "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
   (setq org-latex-caption-above nil) ;; Make sure that captions are below and not above
+  ;; Disable the size of headings
+  (dolist (face '(org-level-1
+                  org-level-2
+                  org-level-3
+                  org-level-4
+                  org-level-5))
+    (set-face-attribute face nil :weight 'semi-bold :height 1.0))
+
   :config
   (add-hook 'org-mode-hook (lambda () (writeroom-mode 1)
                                       (linum-mode -1)
