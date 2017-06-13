@@ -169,8 +169,8 @@
 (use-package org
   :mode
   (("\\.org$" . org-mode))
-  :config
-  (add-hook 'org-mode-hook (lambda () (writeroom-mode 1)))
+
+  :init
   (add-to-list 'org-latex-packages-alist '("" "minted"))
   (setq org-latex-listings 'minted)
   (setq org-latex-pdf-process
@@ -179,6 +179,11 @@
           "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
           "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
   (setq org-latex-caption-above nil) ;; Make sure that captions are below and not above
+  :config
+  (add-hook 'org-mode-hook (lambda () (writeroom-mode 1)
+                                      (linum-mode -1)
+                                      (visual-line-mode t)
+                             ))
 )
 
 ;; (use-package ox-gfm
