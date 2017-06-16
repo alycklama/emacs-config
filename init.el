@@ -20,6 +20,7 @@
    (quote
     (linum-relative gitignore-mode dired-narrow sunrise-commander web-mode sublime-themes git-timemachine restclient haskell-mode protobuf-mode ranger paradox org-babel-eval-in-repl org ox-gfm smart-mode-line autopair dtrt-indent evil-magit column-marker wc-mode evil-mc evil-commentary json-mode use-package dracula-theme badger-theme reykjavik-theme rainbow-mode highlight-thing ivy-bibtex org-ref writeroom-mode expand-region evil ivy ample-theme auto-complete magit ensime counsel-projectile rainbow-delimiters)))
  '(paradox-github-token t)
+ '(safe-local-variable-values (quote ((org-confirm-babel-evaluate))))
  '(sml/theme (quote automatic)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -84,6 +85,11 @@
 
 (global-set-key (kbd "s-/") 'comment-region)
 (global-set-key (kbd "s-?") 'uncomment-region)
+
+;; Supported programming languages
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((scala .t)))
 
 ;; Layout
 (setq column-number-mode t)
@@ -171,6 +177,9 @@
   (("\\.org$" . org-mode))
 
   :init
+  ;; load up Org-mode and Org-babel
+  (require 'org-install)
+  (require 'ob-tangle)
   (add-to-list 'org-latex-packages-alist '("" "minted"))
   (setq org-latex-listings 'minted)
   (setq org-latex-pdf-process
