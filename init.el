@@ -74,6 +74,7 @@
 (global-set-key (kbd "s-s") 'save-buffer)
 (global-set-key (kbd "s-c") 'kill-ring-save)
 (global-set-key (kbd "s-v") 'yank)
+(global-set-key (kbd "s-x") 'kill-region)
 
 ;;(defun auto-indentation ()
 ;;  "Automatically sets the indentation to that of the previous line"
