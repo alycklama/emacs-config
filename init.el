@@ -96,7 +96,7 @@
 (require 'dracula-theme)
 (load-theme 'dracula t)
 
-(let ((font-name "Inconsolata-15"))
+(let ((font-name "Source Code Pro Light 15"))
   (set-default-font font-name)
   (set-frame-font font-name)
 )
