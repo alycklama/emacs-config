@@ -72,7 +72,7 @@
 (global-set-key (kbd "s-z") 'undo-tree-undo)
 (global-set-key (kbd "s-Z") 'undo-tree-redo)
 (global-set-key (kbd "s-s") 'save-buffer)
-(global-set-key (kbd "s-c") 'ns-copy-including-secondary)
+(global-set-key (kbd "s-c") 'kill-ring-save)
 (global-set-key (kbd "s-v") 'yank)
 
 ;;(defun auto-indentation ()
