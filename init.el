@@ -156,7 +156,9 @@
 
   :bind (:map ensime-mode-map
     ("s-<return>" . ensime-edit-definition)
-    ("M-<return>" . ensime-type-at-point)
+    ("M-<return>" . ensime-import-type-at-point)
+    ("C-<return>" . ensime-type-at-point)
+    ("M-s-f" . ensime-search)
   )
 )
 
