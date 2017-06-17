@@ -92,7 +92,7 @@
 ;; Supported programming languages
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((scala .t)))
+ '((shell . t)))
 
 ;; Layout
 (setq column-number-mode t)
