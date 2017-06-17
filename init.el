@@ -7,6 +7,9 @@
                          ("SC" . "http://joseito.republika.pl/sunrise-commander/")
 ))
 
+;; Allow the narrowing to a region within an indirect buffer
+(put 'narrow-to-region 'disabled nil)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
