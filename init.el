@@ -92,11 +92,6 @@
 (global-set-key (kbd "s-/") 'comment-region)
 (global-set-key (kbd "s-?") 'uncomment-region)
 
-;; Supported programming languages
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((shell . t)))
-
 ;; Layout
 (setq column-number-mode t)
 (tool-bar-mode -1)
@@ -211,6 +206,10 @@
                                       (linum-mode -1)
                                       (visual-line-mode t)
                              ))
+  ;; Supported programming languages
+  (org-babel-do-load-languages
+    'org-babel-load-languages
+    '((shell . t)))
 )
 
 ;; (use-package ox-gfm
