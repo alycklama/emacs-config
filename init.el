@@ -35,13 +35,13 @@
 
 (package-initialize)
 
-;; A GNU Emacs library to ensure environment variables inside Emacs look the same as in the user's shell.
-(when (memq window-system '(mac ns x))
-  (exec-path-from-shell-initialize))
-
 (unless package-archive-contents
   (package-refresh-contents))
 (package-install-selected-packages)
+
+;; A GNU Emacs library to ensure environment variables inside Emacs look the same as in the user's shell.
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 
 (setq
  auto-save-interval 20   ; save every 20 characters typed (this is the minimum)
