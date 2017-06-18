@@ -236,11 +236,6 @@
 (linum-relative-global-mode t)
 (setq linum-relative-current-symbol "") ;; Shows the real number on the line's position
 
-;; Smart Hungry Delete
-;; (require 'smart-hungry-delete)
-;; (define-key evil-insert-state-map (kbd "<backspace>") 'smart-hungry-delete-backward-char)
-;; (define-key evil-insert-state-map (kbd "M-<backspace>") 'smart-hungry-delete-forward-char)
-
 ;; Word Count Mode
 (setq wc-modeline-format "[Words: %tw, Chars: %tc]")
 
