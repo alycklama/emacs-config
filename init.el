@@ -173,18 +173,20 @@
 (require 'expand-region)
 (global-set-key (kbd "s-2") 'er/expand-region)
 
-;; Org Mode
-(require 'org-ref)
-(setq org-ref-completion-library 'org-ref-ivy-bibtex)
-
 (use-package org
   :mode
   (("\\.org$" . org-mode))
 
-  :init
-  ;; load up Org-mode and Org-babel
-  (require 'org-install)
-  (require 'ob-tangle)
+  :config
+  (add-hook 'org-mode-hook (lambda () (writeroom-mode 1)
+                                      (linum-mode -1)
+                                      (visual-line-mode t)
+                             ))
+  ;; Supported programming languages
+  (org-babel-do-load-languages
+    'org-babel-load-languages
+    '((shell . t)))
+
   (add-to-list 'org-latex-packages-alist '("" "minted"))
   (setq org-latex-listings 'minted)
   (setq org-latex-pdf-process
@@ -200,16 +202,6 @@
                   org-level-4
                   org-level-5))
     (set-face-attribute face nil :weight 'semi-bold :height 1.0))
-
-  :config
-  (add-hook 'org-mode-hook (lambda () (writeroom-mode 1)
-                                      (linum-mode -1)
-                                      (visual-line-mode t)
-                             ))
-  ;; Supported programming languages
-  (org-babel-do-load-languages
-    'org-babel-load-languages
-    '((shell . t)))
 )
 
 ;; (use-package ox-gfm
