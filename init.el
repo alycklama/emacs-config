@@ -114,13 +114,19 @@
 )
 
 ;; Evil-mode
-(require 'evil)
-(define-key evil-insert-state-map (kbd "TAB") 'tab-to-tab-stop)
-;; Makes sure that wrapped lines will not move more than a single line
-(define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
-(define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
-(define-key evil-normal-state-map (kbd "<down>") 'evil-next-visual-line)
-(define-key evil-normal-state-map (kbd "<up>") 'evil-previous-visual-line)
+(use-package evil
+  :config
+  (define-key evil-insert-state-map (kbd "TAB") 'tab-to-tab-stop)
+  ;; Makes sure that wrapped lines will not move more than a single line
+  (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
+  (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
+  (define-key evil-normal-state-map (kbd "<down>") 'evil-next-visual-line)
+  (define-key evil-normal-state-map (kbd "<up>") 'evil-previous-visual-line)
+
+  ;; Magit
+  (require 'magit)
+  (require 'evil-magit)
+)
 (evil-mode t)
 
 ;; Ivy
@@ -144,10 +150,6 @@
 ;; Auto-complete
 (require 'auto-complete)
 (ac-config-default)
-
-;; Magit
-(require 'magit)
-(require 'evil-magit)
 
 ;; Ensime
 (require 'ensime)
