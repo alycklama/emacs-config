@@ -21,7 +21,7 @@
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(package-selected-packages
    (quote
-    (emmet-mode htmlize move-text linum-relative gitignore-mode dired-narrow sunrise-commander web-mode sublime-themes git-timemachine restclient haskell-mode protobuf-mode ranger paradox org-babel-eval-in-repl org ox-gfm smart-mode-line autopair dtrt-indent evil-magit column-marker wc-mode evil-mc evil-commentary json-mode use-package dracula-theme badger-theme reykjavik-theme rainbow-mode highlight-thing ivy-bibtex org-ref writeroom-mode expand-region evil ivy ample-theme auto-complete magit ensime counsel-projectile rainbow-delimiters)))
+    (spaceline emmet-mode htmlize move-text linum-relative gitignore-mode dired-narrow sunrise-commander web-mode sublime-themes git-timemachine restclient haskell-mode protobuf-mode ranger paradox org-babel-eval-in-repl org ox-gfm smart-mode-line autopair dtrt-indent evil-magit column-marker wc-mode evil-mc evil-commentary json-mode use-package dracula-theme badger-theme reykjavik-theme rainbow-mode highlight-thing ivy-bibtex org-ref writeroom-mode expand-region evil ivy ample-theme auto-complete magit ensime counsel-projectile rainbow-delimiters)))
  '(paradox-github-token t)
  '(safe-local-variable-values (quote ((org-confirm-babel-evaluate))))
  '(sml/theme (quote automatic)))
@@ -221,7 +221,10 @@
   '(require 'ox-gfm nil t))
 
 ;; Write room
-(require 'writeroom-mode)
+(use-package writeroom-mode
+  :config
+  (setq writeroom-mode-line t)
+)
 
 ;; Rainbow mode (for automatic coloring of html color codes (e.e. #f00))
 (require 'rainbow-mode)
@@ -261,6 +264,9 @@
 ;; Dtrt-Indent
 (require 'dtrt-indent)
 (dtrt-indent-mode t)
+
+(require 'spaceline-config)
+(spaceline-spacemacs-theme)
 
 ;; Hooks
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
