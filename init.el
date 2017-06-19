@@ -105,11 +105,16 @@
 
 (let ((font-name "Source Code Pro Light 15"))
   (set-default-font font-name)
-  (set-frame-font font-name)
-)
+  (set-frame-font font-name))
+
+(set-face-attribute 'mode-line nil  :height 110)
 
 ;; Evil-mode
 (use-package evil
+  :init
+  (require 'evil-anzu)
+  (anzu-mode 1)
+
   :config
   (define-key evil-insert-state-map (kbd "TAB") 'tab-to-tab-stop)
   ;; Makes sure that wrapped lines will not move more than a single line
