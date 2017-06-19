@@ -111,10 +111,6 @@
 
 ;; Evil-mode
 (use-package evil
-  :init
-  (require 'evil-anzu)
-  (anzu-mode 1)
-
   :config
   (define-key evil-insert-state-map (kbd "TAB") 'tab-to-tab-stop)
   ;; Makes sure that wrapped lines will not move more than a single line
@@ -126,7 +122,6 @@
   ;; Magit
   (require 'magit)
   (require 'evil-magit)
-  (require 'evil-anzu)
   (setq anzu-cons-mode-line-p nil) ;; Disable anzu as it is provided within spaceline already
 )
 (evil-mode t)
@@ -265,6 +260,9 @@
 
 (require 'spaceline-config)
 (spaceline-spacemacs-theme)
+
+;; Anzu
+(global-anzu-mode +1)
 
 ;; Hooks
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
