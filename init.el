@@ -103,11 +103,11 @@
 (require 'dracula-theme)
 (load-theme 'dracula t)
 
-(let ((font-name "Source Code Pro Light 13")
+(let ((font-name "Source Code Pro Light 12")
   (set-default-font font-name)
   (set-frame-font font-name))
 
-(set-face-attribute 'mode-line nil  :height 120)
+(set-face-attribute 'mode-line nil  :height 130)
 
 ;; Evil-mode
 (use-package evil
