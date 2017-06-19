@@ -25,12 +25,6 @@
  '(paradox-github-token t)
  '(safe-local-variable-values (quote ((org-confirm-babel-evaluate))))
  '(sml/theme (quote automatic)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 (setq load-prefer-newer t)
 
 (package-initialize)
@@ -103,11 +97,11 @@
 (require 'dracula-theme)
 (load-theme 'dracula t)
 
-(let ((font-name "Source Code Pro Light 12")
+(let ((font-name "Source Code Pro Light 13"))
   (set-default-font font-name)
   (set-frame-font font-name))
 
-(set-face-attribute 'mode-line nil  :height 130)
+(set-face-attribute 'mode-line nil  :height 120)
 
 ;; Evil-mode
 (use-package evil
