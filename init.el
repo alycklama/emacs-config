@@ -83,6 +83,8 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (blink-cursor-mode -1)
+;; Fixes an issue with spaceline on OS X where there were glitches the > < signs
+(setq-default ns-use-srgb-colorspace nil)
 
 ;; Default split direction: horizontally
 (setq split-width-threshold 1)
