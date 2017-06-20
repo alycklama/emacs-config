@@ -83,6 +83,9 @@
 (scroll-bar-mode -1)
 (blink-cursor-mode -1)
 
+;; Default split direction: horizontally
+(setq split-width-threshold 1)
+
 (sml/setup)
 
 (require 'dracula-theme)
