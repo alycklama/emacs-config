@@ -171,6 +171,9 @@
   (("\\.org$" . org-mode))
 
   :init
+  ;; Fixes an issue where exporting HTML file didn't work
+  (set-default 'imenu-auto-rescan t)
+
   :config
   (add-hook 'org-mode-hook (lambda () (writeroom-mode 1)
                              (linum-mode -1)
