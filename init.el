@@ -74,15 +74,6 @@
 (global-set-key (kbd "s-x") 'kill-region)
 (global-set-key (kbd "M-<down>") 'move-text-line-down)
 (global-set-key (kbd "M-<up>") 'move-text-line-up)
-
-;;(defun auto-indentation ()
-;;  "Automatically sets the indentation to that of the previous line"
-;;  (interactive)
-;;  (newline)
-;;  (indent-relative-maybe)
-;;)
-;;global-set-key (kbd "RET") 'auto-indentation)
-
 (global-set-key (kbd "s-/") 'comment-region)
 (global-set-key (kbd "s-?") 'uncomment-region)
 
