@@ -208,7 +208,16 @@
 
 (add-hook 'scala-mode-hook
           (lambda ()
-            (column-enforce-mode t)))
+            (column-enforce-mode t)
+            (push '(">=" . ?≥) prettify-symbols-alist)
+            (push '("<=" . ?≤) prettify-symbols-alist)
+            (push '("!=" . ?≠) prettify-symbols-alist)
+            (push '("=>" . ?⇒) prettify-symbols-alist)
+            (push '("->" . ?→) prettify-symbols-alist)
+            (push '("<-" . ?←) prettify-symbols-alist)
+            (push '("<<" . ?≪) prettify-symbols-alist)
+            (push '(">>" . ?≫) prettify-symbols-alist)
+            (prettify-symbols-mode t)))
 
 ;; Counsel Projectile
 (require 'counsel-projectile)
