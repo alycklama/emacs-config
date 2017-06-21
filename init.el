@@ -21,7 +21,58 @@
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(package-selected-packages
    (quote
-    (evil-nerd-commenter evil-lion column-enforce-mode org evil-anzu exec-path-from-shell spaceline emmet-mode htmlize move-text linum-relative gitignore-mode dired-narrow sunrise-commander web-mode sublime-themes git-timemachine restclient haskell-mode protobuf-mode ranger paradox org-babel-eval-in-repl ox-gfm smart-mode-line autopair dtrt-indent evil-magit column-marker wc-mode evil-mc json-mode use-package dracula-theme badger-theme reykjavik-theme rainbow-mode highlight-thing ivy-bibtex org-ref writeroom-mode expand-region evil ivy ample-theme auto-complete magit ensime counsel-projectile rainbow-delimiters)))
+    (
+     ample-theme
+     auto-complete
+     autopair
+     badger-theme
+     column-enforce-mode
+     column-marker
+     counsel-projectile
+     dired-narrow
+     dracula-theme
+     dtrt-indent
+     emmet-mode
+     ensime
+     evil
+     evil-anzu
+     evil-lion
+     evil-magit
+     evil-mc
+     evil-nerd-commenter
+     exec-path-from-shell
+     expand-region
+     git-timemachine
+     gitignore-mode
+     haskell-mode
+     highlight-thing
+     htmlize
+     ivy
+     ivy-bibtex
+     json-mode
+     linum-relative
+     magit
+     move-text
+     org
+     org-babel-eval-in-repl
+     org-ref
+     ox-gfm
+     paradox
+     protobuf-mode
+     rainbow-delimiters
+     rainbow-mode
+     ranger
+     restclient
+     reykjavik-theme
+     smart-mode-line
+     spaceline
+     sublime-themes
+     sunrise-commander
+     use-package
+     wc-mode
+     web-mode
+     writeroom-mode
+     )))
  '(paradox-github-token t)
  '(safe-local-variable-values (quote ((org-confirm-babel-evaluate))))
  '(sml/theme (quote automatic)))
