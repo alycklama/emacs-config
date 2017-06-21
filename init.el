@@ -133,7 +133,7 @@
 ;; Show-paren-mode
 (show-paren-mode t)
 (require 'autopair)
-(autopair-global-mode);; automatically pairs braces and quotes
+(autopair-global-mode) ;; automatically pairs braces and quotes
 
 ;; Auto-complete
 (require 'auto-complete)
