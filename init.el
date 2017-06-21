@@ -148,15 +148,16 @@
 	(add-to-list 'exec-path "/usr/local/bin")
 	(setq ensime-search-interface 'ivy)
 
-  :config
-  (column-enforce-mode 1)
-
   :bind (:map ensime-mode-map
     ("s-<return>" . ensime-edit-definition)
     ("M-<return>" . ensime-import-type-at-point)
     ("C-<return>" . ensime-type-at-point)
     ("M-s-f" . ensime-search)
   ))
+
+(add-hook 'scala-mode-hook
+          (lambda ()
+            (column-enforce-mode t)))
 
 ;; Counsel Projectile
 (require 'counsel-projectile)
