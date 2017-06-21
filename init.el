@@ -110,9 +110,6 @@
   (define-key evil-normal-state-map (kbd "<down>") 'evil-next-visual-line)
   (define-key evil-normal-state-map (kbd "<up>") 'evil-previous-visual-line)
 
-  ;; Magit
-  (require 'magit)
-  (require 'evil-magit)
   (setq anzu-cons-mode-line-p nil) ;; Disable anzu as it is provided within spaceline already
   (evil-lion-mode t)
 )
