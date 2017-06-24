@@ -42,6 +42,7 @@
      evil-nerd-commenter
      exec-path-from-shell
      expand-region
+     flycheck,
      git-timemachine
      gitignore-mode
      haskell-mode
