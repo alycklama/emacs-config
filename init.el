@@ -164,6 +164,8 @@
   (define-key evil-normal-state-map (kbd "<up>") 'evil-previous-visual-line)
 
   (setq anzu-cons-mode-line-p nil) ;; Disable anzu as it is provided within spaceline already
+
+  (require 'evil-magit)
   (evil-lion-mode t)
 )
 (evil-mode t)
