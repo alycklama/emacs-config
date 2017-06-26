@@ -42,6 +42,7 @@
      evil-nerd-commenter
      exec-path-from-shell
      expand-region
+     flycheck,
      git-timemachine
      gitignore-mode
      haskell-mode
@@ -124,8 +125,24 @@
 (global-set-key (kbd "s-v") 'yank)
 (global-set-key (kbd "s-x") 'kill-region)
 (global-set-key (kbd "s-a") 'mark-whole-buffer)
-(global-set-key (kbd "M-<down>") 'move-text-line-down)
-(global-set-key (kbd "M-<up>") 'move-text-line-up)
+
+(defun my-move-line-or-region-up ()
+  (interactive)
+  (if mark-active
+    (move-text-region-up (region-beginning) (region-end) 1)
+    (move-text-line-up)
+  )
+)
+(global-set-key (kbd "M-<down>") 'my-move-line-or-region-down)
+
+(global-set-key (kbd "M-<up>") 'my-move-line-or-region-up)
+(defun my-move-line-or-region-down ()
+  (interactive)
+  (if mark-active
+    (move-text-region-down (region-beginning) (region-end) 1)
+    (move-text-line-down)
+  )
+)
 
 ;; evil-nerd-commenter
 (evilnc-default-hotkeys)
