@@ -138,6 +138,12 @@
 ;; Fixes an issue with spaceline on OS X where there were glitches the > < signs
 (setq-default ns-use-srgb-colorspace nil)
 
+;; Do not automatically split buffers
+(defun no-split-window ()
+  (interactive)
+  nil)
+(setq split-window-preferred-function 'no-split-window)
+
 ;; Default split direction: horizontally
 (setq split-width-threshold 1)
 
