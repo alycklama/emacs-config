@@ -26,6 +26,7 @@
      autopair
      badger-theme
      column-marker
+     company
      counsel-projectile
      dired-narrow
      dracula-theme
@@ -340,5 +341,6 @@
 
 ;; Hooks
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+(add-hook 'after-init-hook 'global-company-mode)
 
 ;; (toggle-frame-fullscreen)
