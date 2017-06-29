@@ -23,7 +23,6 @@
    (quote
     (
      ample-theme
-     auto-complete
      autopair
      badger-theme
      column-marker
@@ -207,10 +206,6 @@
 (show-paren-mode t)
 (require 'autopair)
 (autopair-global-mode) ;; automatically pairs braces and quotes
-
-;; Auto-complete
-(require 'auto-complete)
-(ac-config-default)
 
 ;; Ensime
 (require 'ensime)
