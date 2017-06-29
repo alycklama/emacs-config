@@ -26,7 +26,6 @@
      auto-complete
      autopair
      badger-theme
-     column-enforce-mode
      column-marker
      counsel-projectile
      dired-narrow
@@ -233,7 +232,6 @@
 
 (add-hook 'scala-mode-hook
           (lambda ()
-            (column-enforce-mode t)
             (push '(">=" . ?≥) prettify-symbols-alist)
             (push '("<=" . ?≤) prettify-symbols-alist)
             (push '("!=" . ?≠) prettify-symbols-alist)
