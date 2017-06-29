@@ -332,6 +332,7 @@
   (setq web-mode-content-types-alist
         '(("jsx" . "\\.js[x]?\\'"))))
 
+;; Spaceline
 (require 'spaceline-config)
 (spaceline-spacemacs-theme)
 
