@@ -319,6 +319,10 @@
   ("\\.mustache\\'" . web-mode)
   ("\\.js?\\'" . web-mode)
   :config
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+
   (setq web-mode-tag-auto-close-style t)
   (setq web-mode-enable-auto-closing t)
   (setq web-mode-enable-auto-pairing t)
