@@ -31,7 +31,6 @@
      counsel-projectile
      dired-narrow
      dracula-theme
-     dtrt-indent
      emmet-mode
      ensime
      evil
@@ -328,10 +327,6 @@
   (setq web-mode-enable-auto-quoting t)
   (setq web-mode-content-types-alist
         '(("jsx" . "\\.js[x]?\\'"))))
-
-;; Dtrt-Indent
-(require 'dtrt-indent)
-(dtrt-indent-mode t)
 
 (require 'spaceline-config)
 (spaceline-spacemacs-theme)
