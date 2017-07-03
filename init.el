@@ -294,6 +294,9 @@
 
 ;; Write room
 (use-package writeroom-mode
+  :init
+  (setq writeroom-width 90)
+
   :config
   (setq writeroom-mode-line t)
 )
