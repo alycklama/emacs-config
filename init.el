@@ -223,7 +223,9 @@
     ("M-<return>" . ensime-import-type-at-point)
     ("C-<return>" . ensime-type-at-point)
     ("M-s-f" . ensime-search)
-  ))
+    ("C-<tab>" . ensime-company-complete-or-indent)
+  )
+)
 
 (add-hook 'scala-mode-hook
           (lambda ()
