@@ -239,7 +239,9 @@
     ("M-<return>" . ensime-import-type-at-point)
     ("C-<return>" . ensime-type-at-point)
     ("M-s-f" . ensime-search)
-  ))
+    ("C-<tab>" . ensime-company-complete-or-indent)
+  )
+)
 
 (add-hook 'scala-mode-hook
           (lambda ()
@@ -269,6 +271,8 @@
   :init
   ;; Fixes an issue where exporting HTML file didn't work
   (set-default 'imenu-auto-rescan t)
+  (cua-mode 0)
+  (set-default 'org-support-shift-select t)
 
   :config
   (add-hook 'org-mode-hook (lambda () (writeroom-mode 1)
