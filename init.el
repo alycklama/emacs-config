@@ -183,6 +183,15 @@
   (define-key evil-normal-state-map (kbd "<down>") 'evil-next-visual-line)
   (define-key evil-normal-state-map (kbd "<up>") 'evil-previous-visual-line)
 
+  ;; text-objects
+  (evil-define-text-object evil-inner-pipe (count &optional beg end type)
+    (evil-select-quote ?\| beg end type count nil))
+  (define-key evil-inner-text-objects-map "|" #'evil-inner-pipe)
+
+  (evil-define-text-object evil-a-pipe (count &optional beg end type)
+    (evil-select-quote ?\| beg end type count t))
+  (define-key evil-outer-text-objects-map "|" #'evil-a-pipe)
+
   (setq anzu-cons-mode-line-p nil) ;; Disable anzu as it is provided within spaceline already
 
   (require 'evil-magit)
