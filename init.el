@@ -264,6 +264,12 @@
 (require 'expand-region)
 (global-set-key (kbd "s-2") 'er/expand-region)
 
+(defun org-html-hl-line (src backend info)
+  (when (org-export-derived-backend-p backend 'html)
+    (replace-regexp-in-string
+     "\\([^\n]+\\)(hl:line)\n"
+     "<div style=\"background-color: #fffbdd;\">\\1\n</div>" src)))
+
 (use-package org
   :mode
   (("\\.org$" . org-mode))
@@ -288,6 +294,9 @@
     (set-face-attribute face nil :weight 'semi-bold :height 1.0))
 
   (add-to-list 'org-latex-packages-alist '("" "minted"))
+  (add-to-list 'org-export-filter-src-block-functions
+               'org-html-hl-line)
+
   (setq org-latex-listings 'minted)
   (setq org-latex-pdf-process
         '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
